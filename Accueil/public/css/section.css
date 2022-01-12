@@ -1,0 +1,220 @@
+.box__menu{
+    position: absolute;
+    top: 80%;
+    background-color: white;
+    width: 70%;
+    height: 80%;
+    left: 15%;
+    right: auto;
+    z-index: 1100;
+    border-radius: 5px;
+    box-shadow: 10px 5px 5px 5px #EEEEEE;
+}
+
+.box1, .box2, .box3, .box4{
+    position: absolute;
+    width: 38%;
+    /*background-color: white;*/
+    height: 38%;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.box1{
+    top: 8%;
+    left: 8%;
+}
+
+.box2{
+    top: 8%;
+    left: 54%;
+}
+
+.box3{
+    top: 54%;
+    left: 8%;
+}
+
+.box4{
+    top: 54%;
+    left: 54%;
+}
+
+.marquee{
+    position: absolute;
+    top: 184%;
+    height: 30%;
+    width: 100%;
+    background-color: black;
+    z-index: 2;
+    overflow: hidden;
+    align-items: center;
+}
+
+.imgmarquee{
+    font-size: 400%;
+    line-height: 1.3;
+    color: white;
+    white-space: nowrap;
+    animation: marquee 20s infinite linear;
+}
+
+@keyframes marquee{
+    0%{
+        transform: translateX(0);
+    }
+
+    100%{
+        transform: translateX(-50%);
+    }
+}
+
+.real{
+    position: absolute;
+    top: 170%;
+    left: 50%;
+    transform: translate(-50%);
+    text-align: center;
+}
+
+.real2{
+    position: absolute;
+    top: 218%;
+    left: 50%;
+    transform: translate(-50%);
+    text-align: center;
+}
+
+.plusreal{
+    z-index: 100;
+    width: 200px;
+    height: 50px;
+    border: none;
+    background-color: #FE3B05;
+    border-radius: 5px;
+    color: white;
+    font-size: large;
+    
+}
+
+
+
+
+.choisir{
+    position: absolute;
+    top: 225%;
+    height: 100%;
+    width: 100%;
+    background-color: white;
+    z-index: 2;
+}
+
+
+.titre{
+    width: 100%;
+}
+
+h2{
+    position: absolute;
+    left: 50%;
+    top: 10%;
+    color: black;
+    font-size: 35px;
+    transform: translate(-50%);
+    text-align: center;
+  }
+  
+.bloc1{
+    position: absolute;
+    width: 25%;
+    height: 30%;
+    background-color: black;
+    top: 25%;
+    left: 8.5%;
+}
+  
+.bloc2{
+    position: absolute;
+    width: 25%;
+    height: 20%;
+    /*background-color: green;*/
+    top: 30%;
+    left: 37.5%;
+    text-align: center;
+}
+  
+.bloc3{
+    position: absolute;
+    width: 25%;
+    height: 30%;
+    background-color: black;
+    top: 25%;
+    left: 66.5%;
+}
+  
+.bloc4{
+    position: absolute;
+    width: 25%;
+    height: 20%;
+    /*background-color: green;*/
+    top: 60%;
+    left: 8.5%;
+    text-align: center;
+}
+  
+.bloc5{
+    position: absolute;
+    width: 25%;
+    height: 30%;
+    background-color: black;
+    top: 50%;
+    left: 37.5%;
+}
+  
+.bloc6{
+    position: absolute;
+    width: 25%;
+    height: 20%;
+    /*background-color: green;*/
+    top: 60%;
+    left: 66.5%;
+    text-align: center;
+}
+
+.numero{
+    color: red;
+}
+
+.imag{
+    width: 100%;
+    height: 100%;
+}
+
+
+.contact{
+    position: absolute;
+    top: 315%;
+    width: 100%;
+    height: 25%;
+    background-color: #C65F2C;
+    z-index: 200;
+    text-align: center;
+    color: white;
+    
+}
+
+.titre__contact{
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%);
+    font-size: 50px large;
+    top: 7%;
+}
+
+.text__contact{
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%);
+    font-size: 50px large;
+    top: 35%;
+}

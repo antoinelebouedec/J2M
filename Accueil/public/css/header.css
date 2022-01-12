@@ -77,10 +77,11 @@
     .container{
         width: 100%;
         padding: 0 20px;
+        z-index: 3000;
     }
     .header__navbar-toggle{
         display: flex;
-        z-index: 1000;
+        z-index: 3000;
     }
     .header__navbar--menu{
         transition: all 0.3s ease-in-out;
@@ -92,11 +93,29 @@
         position: absolute;
         width: 100vw;
         height: 100vh;
-        background-color: #FE3B05;
+        background-color: #C65F2C;
         top: 0; left: 0;
+        z-index: 3000;
     }
     .header__navbar--menu-link{
         margin: 20px 0;
         font-size: 24px;
+        z-index: 3000;
     }
+}
+
+.header__bouton{
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%);
+    opacity: 1;
+    z-index: 100;
+    width: 200px;
+    height: 50px;
+    border: none;
+    background-color: #FE3B05;
+    border-radius: 5px;
+    color: white;
+    font-size: large;
 }
