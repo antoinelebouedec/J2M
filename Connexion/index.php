@@ -59,6 +59,7 @@
                 </div>   
             </form>
         </div>
+
         <style>
             .login-form {
                 width: 340px;
@@ -82,5 +83,6 @@
                 font-weight: bold;
             }
         </style>
+        
         </body>
 </html>

@@ -90,7 +90,7 @@
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        position: absolute;
+        position: fixed;
         width: 100vw;
         height: 100vh;
         background-color: #C65F2C;
