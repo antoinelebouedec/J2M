@@ -1,0 +1,181 @@
+.titre--mention{
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%);
+    color: white;
+    top: 40%;
+    font-size: 70px;
+    z-index: 100;
+}
+
+.texte__mention1{
+    width: 43%;
+    left: 6%;
+    position: absolute;
+}
+
+.texte__mention2{
+    width: 43%;
+    right: 6%;
+    position: absolute;
+}
+
+.texte__mention3{
+    display: none;
+}
+
+@media only screen and (max-width: 1000px){
+    .titre--mention{
+        font-size: 50px;
+    }
+
+    .texte__mention2{
+        display: none;
+    }
+
+    .texte__mention3{
+        display: block;
+    }
+
+    .texte__mention1{
+        width: 90%;
+        left: 5%;
+    }
+}
+
+
+
+.contact{
+    position: absolute;
+    top: 215%;
+    width: 100%;
+    height: 40%;
+    background-color: #FF7235;
+    z-index: 200;
+    text-align: center;
+    color: white;
+    
+}
+
+.titre__contact{
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%);
+    font-size: 50px large;
+    top: 7%;
+}
+
+.text__contact{
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%);
+    font-size: 50px large;
+    top: 35%;
+}
+
+
+.footer__mask{
+    position: absolute;
+    top: 0;
+    background-color: white;
+    height: 42px;
+    width: 100%;
+    z-index: 0;
+}
+
+
+
+.footer{
+    background-color: black;
+    position: absolute;
+    left: 0;
+    top: 255%;
+    width: 100%;
+    height: 30%;
+    color: white;
+}
+
+
+.box__footer1{
+    position: absolute;
+    left: 5%;
+    top: 10%;
+    width: 20%;
+    border-bottom: 1px solid white;
+}
+
+.box__footer2{
+    position: absolute;
+    left: 30%;
+    top: 10%;
+    width: 30%;
+    border-bottom: 1px solid white;
+}
+
+.liste{
+    position: absolute;
+    left: 6%;
+    top: 20%;
+}
+
+
+
+@media only screen and (max-width: 1300px){
+    .contact{
+        top: 240%;
+    }
+
+    .footer{
+        top: 280%;
+    }
+}
+
+@media only screen and (max-width: 1000px){
+    .contact{
+        top: 280%;
+    }
+
+    .footer{
+        top: 320%;
+    }
+}
+
+@media only screen and (max-width: 800px){
+    .contact{
+        top: 320%;
+    }
+
+    .footer{
+        top: 360%;
+    }
+
+    .box__footer2{
+        left: 5%;
+        top: 70%;
+        width: 70%;
+    }
+
+    .liste{
+        top: 28%;
+    }
+}
+
+@media only screen and (max-width: 600px){
+    .contact{
+        top: 360%;
+    }
+
+    .footer{
+        top: 400%;
+    }
+}
+
+@media only screen and (max-width: 400px){
+    .contact{
+        top: 410%;
+    }
+
+    .footer{
+        top: 450%;
+    }
+}

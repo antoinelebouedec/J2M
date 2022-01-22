@@ -1,0 +1,203 @@
+*, ::before, ::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+#titre__menuiserie{
+    color: white;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%);
+    z-index: 100;
+    top: 50%;
+    font-size: 60px;
+}
+
+
+
+.galerie {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 80%;
+    max-width: 1300px;
+    margin: 70px auto 0;
+}
+
+.item {
+    width: 300px;
+    height: 200px;
+    margin: 10px;
+    overflow: hidden;
+    flex-shrink: 0;
+}
+.item img {
+    width: 100%;
+    height: auto;
+}
+
+img:active{
+    position: absolute;
+    width: 50%;
+    left: 25%;
+    height: auto;
+    z-index: 999999;
+}
+
+.item:hover{
+    width: 310px;
+    height: 207px;
+}
+
+
+
+
+.contact{
+    position: absolute;
+    top: 230%;
+    width: 100%;
+    height: 25%;
+    background-color: #FF7235;
+    z-index: 200;
+    text-align: center;
+    color: white;
+    
+}
+
+.titre__contact{
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%);
+    font-size: 50px large;
+    top: 7%;
+}
+
+.text__contact{
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%);
+    font-size: 50px large;
+    top: 35%;
+}
+
+
+.contact{
+    position: absolute;
+    top: 225%;
+    width: 100%;
+    height: 40%;
+    background-color: #FF7235;
+    z-index: 200;
+    text-align: center;
+    color: white;
+    
+}
+
+.titre__contact{
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%);
+    font-size: 50px large;
+    top: 7%;
+}
+
+.text__contact{
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%);
+    font-size: 50px large;
+    top: 35%;
+}
+
+
+.footer__mask{
+    position: absolute;
+    top: 0;
+    background-color: white;
+    height: 42px;
+    width: 100%;
+    z-index: 0;
+}
+
+
+.footer{
+    background-color: black;
+    position: absolute;
+    left: 0;
+    top: 265%;
+    width: 100%;
+    height: 30%;
+    color: white;
+}
+
+
+.box__footer1{
+    position: absolute;
+    left: 5%;
+    top: 10%;
+    width: 20%;
+    border-bottom: 1px solid white;
+}
+
+.box__footer2{
+    position: absolute;
+    left: 30%;
+    top: 10%;
+    width: 30%;
+    border-bottom: 1px solid white;
+}
+
+.liste{
+    position: absolute;
+    left: 6%;
+    top: 20%;
+}
+
+
+
+
+
+
+@media only screen and (max-width: 1216px){
+    .contact{
+        top: 290%;
+    }
+
+    #titre__menuiserie{
+        font-size: 50px;
+    }
+
+    .footer{
+        top: 330%;
+    }
+}
+
+@media only screen and (max-width: 816px){
+    .contact{
+        top: 460%;
+    }
+
+    #titre__menuiserie{
+        font-size: 40px;
+    }
+
+    .footer{
+        top: 500%;
+    }
+    
+    .box__footer2{
+    left: 5%;
+    top: 70%;
+    width: 70%;
+    }
+
+    .liste{
+        top: 28%;
+    }
+}
+
+
+
+
+

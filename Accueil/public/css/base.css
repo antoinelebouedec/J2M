@@ -2,6 +2,11 @@
     box-sizing: border-box;
 }
 
+a:link{
+    text-decoration: none;
+    color: white;
+}
+
 body, html{
     margin: 0;
     padding: 0;

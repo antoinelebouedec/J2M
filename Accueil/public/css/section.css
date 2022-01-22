@@ -1,4 +1,4 @@
-.box__menu{
+/*.box__menu{
     position: absolute;
     top: 80%;
     background-color: white;
@@ -14,7 +14,6 @@
 .box1, .box2, .box3, .box4{
     position: absolute;
     width: 38%;
-    /*background-color: white;*/
     height: 38%;
     border-radius: 5px;
     overflow: hidden;
@@ -93,8 +92,7 @@
     background-color: #FE3B05;
     border-radius: 5px;
     color: white;
-    font-size: large;
-    
+    font-size: large; 
 }
 
 
@@ -137,7 +135,6 @@ h2{
     position: absolute;
     width: 25%;
     height: 20%;
-    /*background-color: green;*/
     top: 30%;
     left: 37.5%;
     text-align: center;
@@ -156,7 +153,6 @@ h2{
     position: absolute;
     width: 25%;
     height: 20%;
-    /*background-color: green;*/
     top: 60%;
     left: 8.5%;
     text-align: center;
@@ -175,7 +171,6 @@ h2{
     position: absolute;
     width: 25%;
     height: 20%;
-    /*background-color: green;*/
     top: 60%;
     left: 66.5%;
     text-align: center;
@@ -284,4 +279,492 @@ h2{
         top: 20%;
         z-index: 4000;
     }
+    .textreal{
+        display: none;
+    }
 }
+
+*/
+
+.imag{
+    position: absolute;
+    width: 400px;
+    height: 250px;
+}
+
+.box__menu1{
+    position: absolute;
+    width: 30%;
+    left: 17%;
+    height: 50%;
+}
+
+.box__menu2{
+    position: absolute;
+    width: 30%;
+    right: 17%;
+    height: 50%;
+}
+
+.box__menu3{
+    display: none;
+}
+
+.box1, .box3{
+    position: absolute;
+    margin-top: 10px;
+    left: 6%;
+}
+
+.box2, .box4{
+    position: absolute;
+    margin-top:  300px;
+    left: 6%;
+}
+
+.real{
+    width: 100%;
+    position: absolute;
+    top: 175%;
+    text-align: center;
+}
+
+.marquee{
+    position: absolute;
+    top: 195%;
+    height: 40%;
+    width: 100%;
+    background-color: white;
+    z-index: 2;
+    overflow: hidden;
+    align-items: center;
+}
+
+.imgmarquee{
+    font-size: 400%;
+    line-height: 1.3;
+    color: white;
+    white-space: nowrap;
+    animation: marquee 20s infinite linear;
+}
+
+@keyframes marquee{
+    0%{
+        transform: translateX(0);
+    }
+
+    100%{
+        transform: translateX(-50%);
+    }
+}
+
+.real2{
+    position: absolute;
+    top: 240%;
+    left: 50%;
+    transform: translate(-50%);
+    text-align: center;
+}
+
+.plusreal{
+    z-index: 100;
+    width: 200px;
+    height: 50px;
+    border: none;
+    background-color: #FE3B05;
+    border-radius: 5px;
+    color: white;
+    font-size: large; 
+}
+
+.choisir{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 260%;
+}
+
+.titre__choix{
+    text-align: center;
+}
+
+#image__choix1{
+    left: 5%;
+    bottom: 45%;
+}
+
+#image__choix2{
+    left: 50%;
+    transform: translate(-50%);
+    top: 45%;
+}
+
+#image__choix3{
+    right: 5%;
+    bottom: 45%;
+}
+
+.numero{
+    color: red;
+}
+
+#raison1{
+    position: absolute;
+    text-align: center;
+    left: 50%;
+    transform: translate(-50%);
+    top: 22%;
+}
+
+#raison2{
+    position: absolute;
+    text-align: center;
+    left: 20%;
+    transform: translate(-50%);
+    top: 55%;
+}
+
+#raison3{
+    position: absolute;
+    text-align: center;
+    left: 80%;
+    transform: translate(-50%);
+    top: 55%;
+}
+
+.contact{
+    position: absolute;
+    top: 355%;
+    width: 100%;
+    height: 40%;
+    background-color: #FF7235;
+    z-index: 200;
+    text-align: center;
+    color: white;
+    
+}
+
+.titre__contact{
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%);
+    font-size: 50px large;
+    top: 7%;
+}
+
+.text__contact{
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%);
+    font-size: 50px large;
+    top: 35%;
+}
+
+
+.footer__mask{
+    position: absolute;
+    top: 0;
+    background-color: white;
+    height: 42px;
+    width: 100%;
+    z-index: 0;
+}
+
+
+
+.footer{
+    background-color: black;
+    position: absolute;
+    left: 0;
+    top: 395%;
+    width: 100%;
+    height: 30%;
+    color: white;
+}
+
+
+.box__footer1{
+    position: absolute;
+    left: 5%;
+    top: 10%;
+    width: 20%;
+    border-bottom: 1px solid white;
+}
+
+.box__footer2{
+    position: absolute;
+    left: 30%;
+    top: 10%;
+    width: 30%;
+    border-bottom: 1px solid white;
+}
+
+.liste{
+    position: absolute;
+    left: 6%;
+    top: 20%;
+}
+
+
+
+
+
+
+
+
+
+
+@media only screen and (max-width: 1400px){
+    #image__choix1{
+        width: 300px;
+        height: 200px;
+    }
+
+    #image__choix2{
+        width: 300px;
+        height: 200px;
+    }
+
+    #image__choix3{
+        width: 300px;
+        height: 200px;
+    }
+
+    .contact{
+        top: 345%;
+    }
+
+    .footer{
+        top: 385%;
+    }
+}
+
+
+
+
+
+
+
+
+@media only screen and (max-width: 1200px){
+    .imag{
+        width: 300px;
+        height: 200px;
+    }
+
+    .box2, .box4{
+        margin-top: 250px;
+    }
+
+    .real{
+        top: 160%;
+    }
+
+    .marquee{
+        top: 180%;
+    }
+
+    .real2{
+        top: 225%;
+    }
+
+    .choisir{
+        top: 240%;
+    }
+
+    .contact{
+        top: 322%;
+    }
+
+    .footer{
+        top: 362%;
+    }
+}
+
+
+@media only screen and (max-width: 1050px){
+    .choisir{
+        height: 170%;
+    }
+
+    #image__choix1{
+        top: 15%;
+
+        width: 400px;
+        height: 250px;
+        left: 50%;
+        transform: translate(-50%);
+    }
+    
+    #image__choix2{
+        top: 75%;
+
+        width: 400px;
+        height: 250px;
+        left: 50%;
+        transform: translate(-50%);
+    }
+    
+    #image__choix3{
+        top: 45%;
+
+        width: 400px;
+        height: 250px;
+        left: 50%;
+        transform: translate(-50%);
+    }
+    
+    #raison1{
+        position: absolute;
+        text-align: center;
+        top: 35%;
+        left: 50%;
+        transform: translate(-50%);
+    }
+    
+    #raison2{
+        position: absolute;
+        text-align: center;
+        top: 5%;
+        left: 50%;
+        transform: translate(-50%);
+    }
+    
+    #raison3{
+        position: absolute;
+        text-align: center;
+        top: 65%;
+        left: 50%;
+        transform: translate(-50%);
+    }
+
+    .contact{
+        top: 405%;
+    }
+
+    .footer{
+        top: 445%;
+    }
+}
+
+
+
+@media only screen and (max-width: 860px){
+    .imag{
+        width: 400px;
+        height: 250px;
+        position: absolute;
+        left: 50%;
+        transform: translate(-50%);
+    }
+
+    .box__menu1{
+        width: 100%;
+        left: 0;
+    }
+
+    .box__menu2{
+        display: none;
+    }
+
+    .box__menu3{
+        position: absolute;
+        width: 100%;
+        left: 0;
+        height: auto;
+        display: block;
+    }
+    
+    .box1{
+        position: absolute;
+        left: 50%;
+        transform: translate(-50%);
+    }
+
+    .box2{
+        margin-top: 270px;
+        position: absolute;
+        left: 50%;
+        transform: translate(-50%);
+    }
+
+    .box5{
+        margin-top: 530px;
+    }
+
+    .box6{
+        margin-top: 790px;
+    }
+
+    .real{
+        top: 240%;
+    }
+
+    .marquee{
+        top: 260%;
+    }
+
+    .real2{
+        top: 305%;
+    }
+
+    .choisir{
+        top: 320%;
+    }
+
+    .contact{
+        top: 490%;
+    }
+
+    .footer{
+        top: 530%;
+    }
+
+    .box__footer2{
+        left: 5%;
+        top: 70%;
+        width: 70%;
+    }
+
+    .liste{
+        top: 28%;
+    }
+}
+
+@media only screen and (max-width: 450px){
+    .titre__choix{
+        font-size: 10px;
+    }
+}
+
+@media only screen and (max-width: 401px){
+    .imag{
+        width: 300px;
+        height: 200px;
+    }
+
+    .marquee{
+        top: 265%;
+    }
+
+    .real2{
+        top: 310%;
+    }
+
+    #image__choix1, #image__choix2, #image__choix3{
+        width: 300px;
+        height: 200px;
+    }
+
+    /*.raison3{
+        top: 55%;
+    }*/
+}
+
+
+
+
+
+
+
+
