@@ -1,88 +1,61 @@
+<?php
+
+session_start();
+$bdd = new PDO ('mysql:host=localhost;dbname=j2m;charset=utf8;', 'root', '');
+
+if(isset($_POST['envoi']))
+{
+	if(!empty($_POST['pseudo']) AND !empty($_POST['mdp']))
+	{
+		$pseudo = htmlspecialchars($_POST['pseudo']);
+		$mdp = htmlspecialchars($_POST['mdp']);
+
+		$recupUser = $bdd->prepare('SELECT * FROM users WHERE pseudo = ? AND mdp = ?');
+		$recupUser->execute(array($pseudo, $mdp));
+
+		if($recupUser->rowCount() > 0)
+		{
+			$_SESSION['pseudo'] = $pseudo;
+			$_SESSION['mdp'] = $mdp;
+			$_SESSION['id'] = $recupUser->fetch()['id'];
+
+			header('Location: ../Administrateur/index.php');
+			//echo $_SESSION['id'];
+		}
+		else
+		{
+			echo "Votre mot de passe ou pseudo est incorrect";
+		}
+	}
+	else
+	{
+		echo "Veuillez compléter tous les champs...";
+	}
+}
+
+?>
+
+
+
+
+
 <!DOCTYPE html>
-    <html lang="en">
-        <head>
-            <meta charset="UTF-8">
-            <meta name="viewport" content="width=device-width, initial-scale=1.0">
-            <meta name="author" content="NoS1gnal"/>
+<html>
+	<head>
+		<title>Connexion</title>
+		<meta charset="utf-8">
+	</head>
 
-            <link href="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/magnific-popup.min.css" rel="stylesheet" />
-            <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
-            <title>Connexion</title>
-        </head>
-        <body>
-        
-        <div class="login-form">
-             <?php 
-                if(isset($_GET['login_err']))
-                {
-                    $err = htmlspecialchars($_GET['login_err']);
+	<body>
 
-                    switch($err)
-                    {
-                        case 'password':
-                        ?>
-                            <div class="alert alert-danger">
-                                <strong>Erreur</strong> mot de passe incorrect
-                            </div>
-                        <?php
-                        break;
+		<form method="POST" action="">
 
-                        case 'email':
-                        ?>
-                            <div class="alert alert-danger">
-                                <strong>Erreur</strong> email incorrect
-                            </div>
-                        <?php
-                        break;
+			<input type="text" name="pseudo" autocomplete="off">
+			<br/>
+			<input type="password" name="mdp" autocomplete="off">
+			<br/><br/>
+			<input type="submit" name="envoi">
+		</form>
 
-                        case 'already':
-                        ?>
-                            <div class="alert alert-danger">
-                                <strong>Erreur</strong> compte non existant
-                            </div>
-                        <?php
-                        break;
-                    }
-                }
-                ?> 
-            
-            <form action="connexion.php" method="post">
-                <h2 class="text-center">Connexion</h2>       
-                <div class="form-group">
-                    <input type="login" name="login" class="form-control" placeholder="Pseudo" required="required" autocomplete="off">
-                </div>
-                <div class="form-group">
-                    <input type="password" name="password" class="form-control" placeholder="Mot de passe" required="required" autocomplete="off">
-                </div>
-                <div class="form-group">
-                    <button type="submit" class="btn btn-primary btn-block">Connexion</button>
-                </div>   
-            </form>
-        </div>
-
-        <style>
-            .login-form {
-                width: 340px;
-                margin: 50px auto;
-            }
-            .login-form form {
-                margin-bottom: 15px;
-                background: #f7f7f7;
-                box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
-                padding: 30px;
-            }
-            .login-form h2 {
-                margin: 0 0 15px;
-            }
-            .form-control, .btn {
-                min-height: 38px;
-                border-radius: 2px;
-            }
-            .btn {        
-                font-size: 15px;
-                font-weight: bold;
-            }
-        </style>
-        
-        </body>
+	</body>
 </html>

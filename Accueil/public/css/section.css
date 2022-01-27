@@ -505,6 +505,17 @@ h2{
     top: 20%;
 }
 
+.admin{
+    position: absolute;
+    right: 1%;
+    bottom: 1%;
+    color: black;
+}
+
+.admin:hover{
+    color: white;
+}
+
 
 
 
@@ -760,6 +771,9 @@ h2{
         top: 55%;
     }*/
 }
+
+
+
 
 
 
