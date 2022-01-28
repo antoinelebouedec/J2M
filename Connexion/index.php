@@ -44,18 +44,26 @@ if(isset($_POST['envoi']))
 	<head>
 		<title>Connexion</title>
 		<meta charset="utf-8">
+		<link rel="stylesheet" href="style.css">
 	</head>
 
 	<body>
 
-		<form method="POST" action="">
+		<div class="formulaire">
 
-			<input type="text" name="pseudo" autocomplete="off">
-			<br/>
-			<input type="password" name="mdp" autocomplete="off">
-			<br/><br/>
-			<input type="submit" name="envoi">
-		</form>
+			<img class="logo" src="Logo.png">
+
+			<form method="POST" action="">
+				<div class="texte">
+					Pseudo : <input type="text" name="pseudo" autocomplete="off">
+					<br/><br/>
+					Mot de passe : <input type="password" name="mdp" autocomplete="off">
+					<br/><br/>
+				</div>
+				<input type="submit" name="Validé">
+			</form>
+
+		</div>
 
 	</body>
 </html>

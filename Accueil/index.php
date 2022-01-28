@@ -11,6 +11,8 @@
         <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
         <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@500&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
     </head>
 
     <body>
@@ -42,17 +44,68 @@
 
 
             </div>
-        </div>   
+        </div>  
+        
+        <script src="public/js/app.js"></script>
 
-        <!--<button class="header__bouton"><a href="../Devis/devis.php">DEVIS</a></button>-->
-        <a href="#contact"><button class="header__bouton" style="font-family: 'Nunito';">Contactez-nous</button></a>
+        <button id="togg1" class="header__bouton">DEVIS</button>
+        <!--<a href="#contact"><button class="header__bouton" style="font-family: 'Nunito';">Contactez-nous</button></a>-->
+
+
+        <?php
+        
+        //Connexion à la BDD
+        session_start();
+        $bdd = new PDO ('mysql:host=localhost;dbname=j2m;charset=utf8;', 'root', '');
+
+        if($_POST){
+            $nom = $_POST['nom'];
+            $prenom = $_POST['prenom'];
+            $telephone = $_POST['telephone'];
+            $ville = $_POST['ville'];
+            $adresse = $_POST['adresse'];
+            $objet = $_POST['objet'];
+            if(!empty($nom) AND !empty($prenom) AND !empty($telephone) AND !empty($ville) AND !empty($adresse) AND !empty($objet)){
+                mysql_query('INSERT INTO devis (nom, prenom, telephone, ville, adresse, objet) VALUES ("'.$nom.'", "'.$prenom.'", "'.$telephone.'", "'.$ville.'", "'.$adresse.'", "'.$objet.'")') or die ('Erreur :' .mysql_error());
+                echo "OK!";
+            }
+            else echo "Erreurn un ou plusieurs champs est vide.";
+        }
+        
+        ?>
+        <div id="d1" class="devis">
+            <br/>
+            <h2>Demande de devis</h2>
+            <form action="" class="formulaire__devis">
+                <br/><br/>
+                <label class="label" for="nom">Nom : </label>
+                <input class="ecrire" type="text" id="nom">
+                <br/><br/>
+                <label class="label" for="prenom">Prénom : </label>
+                <input class="ecrire" type="text" id="prenom">
+                <br/><br/>
+                <label class="label" for="telephone">Téléphone : </label>
+                <input class="ecrire" type="text" id="telephone">
+                <br/><br/>
+                <label class="label" for="ville">Ville : </label>
+                <input class="ecrire" type="text" id="ville">
+                <br/><br/>
+                <label class="label" for="adresse">Adresse : </label>
+                <input class="ecrire" type="text" id="adresse">
+                <br/><br/>
+                <label class="label" for="objet">Objet : </label>
+                <input class="ecrire" type="text" id="objet">
+                <br/><br/>
+                <input type="submit" value="Envoyer">
+            </form>
+        </div>
 
         <script
             src="https://code.jquery.com/jquery-3.6.0.min.js"
             integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
             crossorigin="anonymous">
         </script>
-        <script src="public/js/app.js"></script>
+        
 
         <div class="box__menu1">
             <div class="box1"><a href="interieure.html"><img class="imag" id="image__box1" src="../Accueil/public/img/interieure.jpg"></a></div>
@@ -170,8 +223,10 @@
                 </ul>
             </div>   
             
-            <div class="admin"><a href="../Connexion/index.php"><i class="fas fa-users-cog"></i></a></div>
+            
         </div>
+
+        <div class="admin"><a href="../Connexion/index.php"><i class="fas fa-users-cog"></i></a></div>
 
 
     </body>

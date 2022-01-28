@@ -509,7 +509,8 @@ h2{
     position: absolute;
     right: 1%;
     bottom: 1%;
-    color: black;
+    color: red;
+    z-index: 9999;
 }
 
 .admin:hover{
@@ -772,8 +773,25 @@ h2{
     }*/
 }
 
+#d1{
+    position: absolute;
+    left: 50%;
+    width: 51%;
+    height: 70%;
+    background-color: white;
+    border-radius: 5px;
+    top: 15%;
+    z-index: 9999999;
+    text-align: center;
+}
 
+.label{
+    margin-left: 10%;
+}
 
+.ecrire{
+    margin-left: 10%;
+}
 
 
 
