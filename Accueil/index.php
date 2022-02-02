@@ -13,6 +13,7 @@
         <link rel="stylesheet" href="https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css">
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="script.js" async></script>
     </head>
 
     <body>
@@ -48,7 +49,7 @@
         
         <script src="public/js/app.js"></script>
 
-        <button id="togg1" class="header__bouton">DEVIS</button>
+        <button class="header__bouton" onclick="document.getElementById('d1').style.display='block'">DEVIS</button>
         <!--<a href="#contact"><button class="header__bouton" style="font-family: 'Nunito';">Contactez-nous</button></a>-->
 
 
@@ -69,7 +70,7 @@
                 mysql_query('INSERT INTO devis (nom, prenom, telephone, ville, adresse, objet) VALUES ("'.$nom.'", "'.$prenom.'", "'.$telephone.'", "'.$ville.'", "'.$adresse.'", "'.$objet.'")') or die ('Erreur :' .mysql_error());
                 echo "OK!";
             }
-            else echo "Erreurn un ou plusieurs champs est vide.";
+            else echo "Erreur un ou plusieurs champs est vide.";
         }
         
         ?>
@@ -98,6 +99,8 @@
                 <br/><br/>
                 <input type="submit" value="Envoyer">
             </form>
+            <br/><br/><br/>
+            <i onclick="document.getElementById('d1').style.display='none'" class="fas fa-times"></i>
         </div>
 
         <script
@@ -223,10 +226,10 @@
                 </ul>
             </div>   
             
-            
+            <div class="admin"><a href="../Login/login.php"><i class="fas fa-users-cog"></i></a></div>
         </div>
 
-        <div class="admin"><a href="../Connexion/index.php"><i class="fas fa-users-cog"></i></a></div>
+        
 
 
     </body>
