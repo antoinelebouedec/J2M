@@ -777,27 +777,6 @@ h2{
     }*/
 }
 
-#d1{
-    position: absolute;
-    display: none;
-    left: 50%;
-    width: 50%;
-    height: 70%;
-    background-color: white;
-    border-radius: 5px;
-    top: 15%;
-    z-index: 9999999;
-    text-align: center;
-    overflow: hidden;
-}
-
-.label{
-    margin-left: 10%;
-}
-
-.ecrire{
-    margin-left: 10%;
-}
 
 
 

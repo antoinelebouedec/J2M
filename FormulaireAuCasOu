@@ -1,0 +1,21 @@
+<?php
+        
+        //Connexion à la BDD
+        session_start();
+        $bdd = new PDO ('mysql:host=localhost;dbname=j2m;charset=utf8;', 'root', '');
+
+        if($_POST){
+            $nom = $_POST['nom'];
+            $prenom = $_POST['prenom'];
+            $telephone = $_POST['telephone'];
+            $ville = $_POST['ville'];
+            $adresse = $_POST['adresse'];
+            $objet = $_POST['objet'];
+            if(!empty($nom) AND !empty($prenom) AND !empty($telephone) AND !empty($ville) AND !empty($adresse) AND !empty($objet)){
+                mysql_query('INSERT INTO devis (nom, prenom, telephone, ville, adresse, objet) VALUES ("'.$nom.'", "'.$prenom.'", "'.$telephone.'", "'.$ville.'", "'.$adresse.'", "'.$objet.'")') or die ('Erreur :' .mysql_error());
+                echo "OK!";
+            }
+            else echo "Erreur un ou plusieurs champs est vide.";
+        }
+        
+        ?>

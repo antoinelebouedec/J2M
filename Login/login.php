@@ -14,12 +14,16 @@
 	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
 </head>
 <body>
+	<script> 
+		alert('Si vous n\'êtes pas administrateur de ce site veuillez quitter cette page !'); 
+	</script>
+
 	  <div class="d-flex justify-content-center align-items-center" style="min-height: 100vh;">
 	  	<form class="p-5 rounded shadow" 
 	  	      action="auth.php"
 	  	      method="post" 
 	  	      style="width: 30rem">
-	  		<h1 class="text-center pb-5 display-4">LOGIN</h1>
+	  		<h1 class="text-center pb-5 display-4">CONNEXION</h1>
 	  		<?php if (isset($_GET['error'])) { ?>
 	  		<div class="alert alert-danger" role="alert">
 			  <?=htmlspecialchars($_GET['error'])?>
@@ -27,7 +31,7 @@
 		    <?php } ?>
 		  <div class="mb-3">
 		    <label for="exampleInputEmail1" 
-		           class="form-label">Email address
+		           class="form-label">Adresse mail
 		    </label>
 		    <input type="email" 
 		           name="email" 
@@ -37,7 +41,7 @@
 		  </div>
 		  <div class="mb-3">
 		    <label for="exampleInputPassword1" 
-		           class="form-label">Password
+		           class="form-label">Mot de passe
 		    </label>
 		    <input type="password" 
 		           class="form-control" 
@@ -45,11 +49,12 @@
 		           id="exampleInputPassword1">
 		  </div>
 		  <button type="submit" 
-		          class="btn btn-primary">LOGIN
+		          class="btn btn-primary">Se connecter
 		  </button>
 		</form>
+		<a href="../Accueil/index.php">Retour à la page d'accueil</a>
 	  </div>
-</body>
+	</body>
 </html>
 
 <?php 

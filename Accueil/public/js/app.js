@@ -1,4 +1,4 @@
-alert("JS fonctionne");
+//alert("JS fonctionne");
 
 $('.header__navbar-toggle').click(function(e){
     e.preventDefault();
